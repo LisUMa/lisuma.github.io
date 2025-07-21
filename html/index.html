@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LisUMa's Wonderland</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flying-images">
+        <!-- Левые изображения -->
+        <img src="big.png" class="flying-img left-img large-img" alt="big">
+        <img src="cards.png" class="flying-img left-img" alt="cards">
+        <img src="heart.png" class="flying-img left-img" alt="heart">
+        <img src="key.png" class="flying-img left-img" alt="key">
+        <img src="red-rose.png" class="flying-img left-img" alt="red rose">
+        <img src="white-rose.png" class="flying-img left-img" alt="white rose">
+        <img src="tea.png" class="flying-img left-img" alt="tea">
+        <img src="pion.png" class="flying-img left-img" alt="peony">
+        <img src="big.png" class="flying-img left-img" alt="big">
+        <img src="cards.png" class="flying-img left-img" alt="cards">
+        <img src="heart.png" class="flying-img left-img" alt="heart">
+
+        <!-- Правые изображения -->
+        <img src="big.png" class="flying-img right-img" alt="big">
+        <img src="cards.png" class="flying-img right-img" alt="cards">
+        <img src="dog.png" class="flying-img right-img" alt="dog">
+        <img src="pion.png" class="flying-img left-img" alt="peony">
+        <img src="heart.png" class="flying-img right-img" alt="heart">
+        <img src="rabbit.png" class="flying-img right-img special-img" alt="rabbit">
+        <img src="red-rose.png" class="flying-img right-img" alt="red rose">
+        <img src="white-rose.png" class="flying-img right-img" alt="white rose">
+        <img src="otter.png" class="flying-img right-img" alt="otter">
+        <img src="tea.png" class="flying-img left-img" alt="tea">
+    </div>
+
+    <!-- Частицы для заголовка -->
+    <div class="header-particles"></div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Welcome to My Wonderland</h1>
+                <p class="header-quote">"It's no use going back to yesterday, because I was a different person then."</p>
+            </div>
+        </header>
+
+        <section class="card about-me" data-bg-color="#E6F2FF">
+            <h2 class="section-title"><i class="fas fa-hat-wizard"></i> About Me</h2>
+            <p>
+                I want to become a developer-analyst. I am an inquisitive and creative person, and my hidden talent is keen observation—much like Alice, who noticed all the oddities and patterns in Wonderland. I enjoy collecting data, analyzing relationships among them, and drawing conclusions. I thrive in hard work and can find multiple solutions to the same problem. While I love working independently, I also recognize the value of teamwork when tackling complex challenges, just as Alice relied on others to navigate Wonderland. I plan things several steps ahead and am skilled at following regulations, though I'm not afraid to rethink them when necessary.
+            </p>
+        </section>
+
+        <section class="card journey" data-bg-color="#FFF5E6">
+            <h2 class="section-title"><i class="fas fa-map"></i> My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-university"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - Present</div>
+                        <h3 class="timeline-title">University</h3>
+                        <p class="timeline-desc">Studying at the Faculty of Mathematics, transitioning to the fourth and final year.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-palette"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018</div>
+                        <h3 class="timeline-title">Art School</h3>
+                        <p class="timeline-desc">Graduated from the E.M. Stompelev Children's Art School.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-crown"></i></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Skills & Qualities</div>
+                        <h3 class="timeline-title">Personal Achievements</h3>
+                        <p class="timeline-desc">I have a driver's license, so I probably know how to stay calm in stressful situations and continue to work effectively even in conditions of high pressure and uncertainty — like at a crazy tea party with the March hare, where everything goes wrong, but I still find the right answers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card interests" data-bg-color="#F0FFE6">
+            <h2 class="section-title"><i class="fas fa-magic"></i> Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-item"><i class="fas fa-paint-brush"></i> Drawing</div>
+                <div class="interest-item"><i class="fas fa-music"></i> Singing</div>
+                <div class="interest-item"><i class="fas fa-camera"></i> Photography</div>
+                <div class="interest-item"><i class="fas fa-book"></i> Reading</div>
+                <div class="interest-item"><i class="fas fa-language"></i> Chinese</div>
+                <div class="interest-item"><i class="fas fa-film"></i> Video Editing</div>
+                <div class="interest-item"><i class="fas fa-hashtag"></i> Social Media</div>
+                <div class="interest-item"><i class="fas fa-plane"></i> Traveling</div>
+            </div>
+        </section>
+
+        <section class="card skills" data-bg-color="#FFE6E6">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Skills</h2>
+            <div class="skills-container">
+                <div class="skill-column">
+                    <div class="skill-category">
+                        <h3 class="skill-title">Technical</h3>
+                        <ul class="skill-items">
+                            <li class="skill-item"><i class="fas fa-star"></i> Excel</li>
+                            <li class="skill-item"><i class="fas fa-star"></i> SQL</li>
+                            <li class="skill-item"><i class="fas fa-star"></i> C++</li>
+                            <li class="skill-item"><i class="fas fa-star"></i> Python</li>
+                            <li class="skill-item"><i class="fas fa-star"></i> LaTex</li>
+                            <li class="skill-item"><i class="fas fa-star"></i> GitHub</li>
+                            <li class="skill-item"><i class="fas fa-star"></i> DaVinci Resolve</li>
+                            <li class="skill-item"><i class="fas fa-star"></i> Photoshop</li>
+                            <li class="skill-item"><i class="fas fa-star"></i> Figma</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skill-column">
+                    <div class="skill-category">
+                        <h3 class="skill-title">Personal</h3>
+                        <ul class="skill-items">
+                            <li class="skill-item"><i class="fas fa-heart"></i> Patience</li>
+                            <li class="skill-item"><i class="fas fa-heart"></i> Self-organization</li>
+                            <li class="skill-item"><i class="fas fa-heart"></i> Task decomposition</li>
+                            <li class="skill-item"><i class="fas fa-heart"></i> Communication</li>
+                            <li class="skill-item"><i class="fas fa-heart"></i> Responsibility</li>
+                            <li class="skill-item"><i class="fas fa-heart"></i> Creativity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="skill-column">
+                    <div class="skill-category">
+                        <h3 class="skill-title">Languages</h3>
+                        <ul class="skill-items">
+                            <li class="skill-item"><i class="fas fa-language"></i> English (Intermediate)</li>
+                            <li class="skill-item"><i class="fas fa-language"></i> Chinese (Learning)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card contact" data-bg-color="#FFF9E6">
+            <h2 class="section-title"><i class="fas fa-pencil-alt"></i> Contact Me</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-hourglass-half"></i> Age: 21</p>
+                <p><i class="fas fa-user"></i> Name: Alisa</p>
+                <div class="links">
+                    <a href="https://t.me/Lisumasun" class="wonderland-link">
+                        <span class="link-icon"><i class="fab fa-telegram"></i></span>
+                        <span class="link-text">Telegram</span>
+                        <span class="link-decoration">✧</span>
+                    </a>
+                    <a href="https://vk.com/lisumasun" class="wonderland-link">
+                        <span class="link-icon"><i class="fab fa-vk"></i></span>
+                        <span class="link-text">VK</span>
+                        <span class="link-decoration">✧</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>"We're all mad here."</p>
+            <p class="copyright">© <span id="year"></span> Alice. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Create particles for header
+        const createHeaderParticles = () => {
+            const particlesContainer = document.querySelector('.header-particles');
+            const header = document.querySelector('header');
+
+            // Clear existing particles
+            particlesContainer.innerHTML = '';
+
+            // Create 15 particles (меньше для лучшей производительности)
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'header-particle';
+
+                // Random properties
+                const size = Math.random() * 3 + 2; // 2-5px
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 80 + 10; // 10-90% of header height
+                const delay = Math.random() * 5;
+                const duration = 15 + Math.random() * 10;
+
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+
+                if (Math.random() > 0.5) {
+                    particle.style.borderRadius = '50%';
+                }
+
+                particlesContainer.appendChild(particle);
+            }
+        };
+
+        // Animation for elements on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.card, .timeline-item, .interest-item, .skill-category');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        };
+
+        const floatImages = () => {
+            const container = document.querySelector('.container');
+            const containerRect = container.getBoundingClientRect();
+            const containerWidth = containerRect.width;
+            const containerLeft = containerRect.left;
+            const containerRight = containerRect.right;
+            const docHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+            const margin = 20;
+            const minDistance = 30;
+
+            const allImages = document.querySelectorAll('.flying-img');
+            const occupiedPositions = [];
+
+            const isPositionOccupied = (x, y, width, height) => {
+                return occupiedPositions.some(pos => {
+                    return !(x + width < pos.x - minDistance ||
+                        x > pos.x + pos.width + minDistance ||
+                        y + height < pos.y - minDistance ||
+                        y > pos.y + pos.height + minDistance);
+                });
+            };
+
+            allImages.forEach((img, i) => {
+                const imgWidth = parseInt(img.width) || parseInt(window.getComputedStyle(img).width) || 50;
+                const imgHeight = parseInt(img.height) || parseInt(window.getComputedStyle(img).height) || 50;
+
+                let xPos, yPos;
+                let attempts = 0;
+                const maxAttempts = 100;
+
+                do {
+                    const isLeft = img.classList.contains('left-img');
+                    yPos = Math.random() * docHeight;
+
+                    if (isLeft) {
+                        const leftArea = containerLeft - margin - imgWidth;
+                        xPos = Math.max(margin, Math.random() * leftArea);
+                    } else {
+                        const rightAreaStart = containerRight + margin;
+                        const rightAreaWidth = window.innerWidth - rightAreaStart - margin - imgWidth;
+                        xPos = rightAreaStart + Math.random() * rightAreaWidth;
+                    }
+
+                    attempts++;
+                    if (attempts >= maxAttempts) break;
+                } while (isPositionOccupied(xPos, yPos, imgWidth, imgHeight));
+
+                occupiedPositions.push({
+                    x: xPos,
+                    y: yPos,
+                    width: imgWidth,
+                    height: imgHeight
+                });
+
+                img.style.position = 'fixed';
+                img.style.left = `${xPos}px`;
+                img.style.top = `${yPos}px`;
+                img.style.zIndex = '0';
+                img.style.willChange = 'transform';
+                img.style.pointerEvents = 'none';
+
+                // Создаем плавное движение для каждой картинки
+                const animationName = `float-${i}-${Math.random().toString(36).substr(2, 9)}`;
+                const duration = 15 + Math.random() * 15;
+                const delay = Math.random() * 5;
+                const isLeft = img.classList.contains('left-img');
+
+                // Разные параметры движения для каждой картинки
+                const moveX = 30 + Math.random() * 70;
+                const moveY = 20 + Math.random() * 40;
+                const rotate = 5 + Math.random() * 10;
+
+                const keyframes = `
+            @keyframes ${animationName} {
+                0% { transform: translate(0, 0) rotate(0deg); }
+                25% { transform: translate(${isLeft ? '-' : ''}${moveX * 0.7}px, -${moveY * 0.7}px) rotate(${isLeft ? rotate : -rotate}deg); }
+                50% { transform: translate(${isLeft ? '-' : ''}${moveX}px, 0) rotate(0deg); }
+                75% { transform: translate(${isLeft ? '-' : ''}${moveX * 0.7}px, ${moveY * 0.7}px) rotate(${isLeft ? -rotate : rotate}deg); }
+                100% { transform: translate(0, 0) rotate(0deg); }
+            }
+        `;
+
+                const style = document.createElement('style');
+                style.innerHTML = keyframes;
+                document.head.appendChild(style);
+
+                img.style.animation = `${animationName} ${duration}s ease-in-out ${delay}s infinite`;
+            });
+
+            // Параллакс-эффект при скролле
+            let lastScrollTop = 0;
+            let ticking = false;
+
+            const updateOnScroll = () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (Math.abs(scrollTop - lastScrollTop) > 5) {
+                    lastScrollTop = scrollTop;
+
+                    allImages.forEach(img => {
+                        const currentTop = parseInt(img.style.top) || 0;
+                        const speedFactor = 0.3 + Math.random() * 0.4; // Разная скорость для каждой картинки
+                        const newY = currentTop - (scrollTop - lastScrollTop) * speedFactor;
+                        const maxY = docHeight - (parseInt(img.height) || 50);
+                        const clampedY = Math.max(0, Math.min(maxY, newY));
+
+                        img.style.top = `${clampedY}px`;
+                    });
+                }
+
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateOnScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            };
+
+            window.addEventListener('scroll', updateOnScroll);
+        };
+
+        // Обработчики изменений
+        window.addEventListener('load', () => {
+            createHeaderParticles();
+            animateOnScroll();
+            floatImages();
+
+            // Принудительно показываем карточки, если IntersectionObserver не сработал
+            setTimeout(() => {
+                document.querySelectorAll('.card, .timeline-item, .interest-item, .skill-category')
+                    .forEach(el => el.classList.add('visible'));
+            }, 1000);
+        });
+
+        window.addEventListener('resize', () => {
+            floatImages();
+            createHeaderParticles();
+        });
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', () => {
+                floatImages();
+                createHeaderParticles();
+            });
+        }
+
+        // Color change on scroll
+        const colorChangeOnScroll = () => {
+            const sections = document.querySelectorAll('.card');
+            const options = {
+                threshold: 0.3
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bgColor = entry.target.getAttribute('data-bg-color');
+                        document.body.style.backgroundColor = bgColor;
+                        document.body.style.transition = 'background-color 0.5s ease';
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        };
+
+        window.addEventListener('load', colorChangeOnScroll);
+    </script>
+</body>
+</html>
