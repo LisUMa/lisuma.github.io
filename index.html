@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LisUMa's Wonderland</title>
-    <link rel="icon" href="фавиконка.png" type="image/png">
-    <link rel="shortcut icon" href="фавиконка.png" type="image/png">
-    <link rel="apple-touch-icon" href="фавиконка.png">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,31 +15,20 @@
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-    <div class="flying-images">
-        <!-- Левые изображения -->
-        <img src="big.png" class="flying-img left-img large-img" alt="big">
-        <img src="cards.png" class="flying-img left-img" alt="cards">
-        <img src="heart.png" class="flying-img left-img" alt="heart">
-        <img src="key.png" class="flying-img left-img" alt="key">
-        <img src="red-rose.png" class="flying-img left-img" alt="red rose">
-        <img src="white-rose.png" class="flying-img left-img" alt="white rose">
-        <img src="tea.png" class="flying-img left-img" alt="tea">
-        <img src="pion.png" class="flying-img left-img" alt="peony">
-        <img src="big.png" class="flying-img left-img" alt="big">
-        <img src="cards.png" class="flying-img left-img" alt="cards">
-        <img src="heart.png" class="flying-img left-img" alt="heart">
+    <div class="decorative-elements">
+        <!-- Левые элементы -->
+        <div class="decorative-element left" data-icon="♠"></div>
+        <div class="decorative-element left" data-icon="♥"></div>
+        <div class="decorative-element left" data-icon="♣"></div>
+        <div class="decorative-element left" data-icon="♦"></div>
+        <div class="decorative-element left" data-icon="⌛"></div>
 
-        <!-- Правые изображения -->
-        <img src="big.png" class="flying-img right-img" alt="big">
-        <img src="cards.png" class="flying-img right-img" alt="cards">
-        <img src="dog.png" class="flying-img right-img" alt="dog">
-        <img src="pion.png" class="flying-img left-img" alt="peony">
-        <img src="heart.png" class="flying-img right-img" alt="heart">
-        <img src="rabbit.png" class="flying-img right-img special-img" alt="rabbit">
-        <img src="red-rose.png" class="flying-img right-img" alt="red rose">
-        <img src="white-rose.png" class="flying-img right-img" alt="white rose">
-        <img src="otter.png" class="flying-img right-img" alt="otter">
-        <img src="tea.png" class="flying-img left-img" alt="tea">
+        <!-- Правые элементы -->
+        <div class="decorative-element right" data-icon="🔑"></div>
+        <div class="decorative-element right" data-icon="🎩"></div>
+        <div class="decorative-element right" data-icon="☕"></div>
+        <div class="decorative-element right" data-icon="🕰️"></div>
+        <div class="decorative-element right" data-icon="🌹"></div>
     </div>
 
     <!-- Частицы для заголовка -->
@@ -248,7 +237,27 @@
             const margin = 20;
             const minDistance = 30;
 
-            const allImages = document.querySelectorAll('.flying-img');
+            // Удаляем старые летающие изображения, если они есть
+            document.querySelectorAll('.flying-img').forEach(el => el.remove());
+
+            // Создаем массив с SVG иконками, которые будем использовать
+            const icons = [
+                { icon: '♠', class: 'left-img' },
+                { icon: '♥', class: 'left-img' },
+                { icon: '♣', class: 'left-img' },
+                { icon: '♦', class: 'left-img' },
+                { icon: '⌛', class: 'left-img' },
+                { icon: '🔑', class: 'right-img' },
+                { icon: '🎩', class: 'right-img' },
+                { icon: '☕', class: 'right-img' },
+                { icon: '🕰️', class: 'right-img' },
+                { icon: '🌹', class: 'right-img' },
+                { icon: '✧', class: 'left-img' },
+                { icon: '✦', class: 'right-img' },
+                { icon: '❀', class: 'left-img' },
+                { icon: '✿', class: 'right-img' }
+            ];
+
             const occupiedPositions = [];
 
             const isPositionOccupied = (x, y, width, height) => {
@@ -260,16 +269,26 @@
                 });
             };
 
-            allImages.forEach((img, i) => {
-                const imgWidth = parseInt(img.width) || parseInt(window.getComputedStyle(img).width) || 50;
-                const imgHeight = parseInt(img.height) || parseInt(window.getComputedStyle(img).height) || 50;
+            // Создаем 10-15 летающих элементов
+            const elementsCount = 10 + Math.floor(Math.random() * 5);
+
+            for (let i = 0; i < elementsCount; i++) {
+                const iconData = icons[Math.floor(Math.random() * icons.length)];
+                const img = document.createElement('div');
+                img.className = `flying-img ${iconData.class}`;
+                img.innerHTML = iconData.icon;
+
+                // Случайный размер от 20px до 40px
+                const size = 30 + Math.random() * 30;
+                const imgWidth = size;
+                const imgHeight = size;
 
                 let xPos, yPos;
                 let attempts = 0;
                 const maxAttempts = 100;
 
                 do {
-                    const isLeft = img.classList.contains('left-img');
+                    const isLeft = iconData.class === 'left-img';
                     yPos = Math.random() * docHeight;
 
                     if (isLeft) {
@@ -285,6 +304,8 @@
                     if (attempts >= maxAttempts) break;
                 } while (isPositionOccupied(xPos, yPos, imgWidth, imgHeight));
 
+                if (attempts >= maxAttempts) continue; // Пропускаем если не нашли подходящее место
+
                 occupiedPositions.push({
                     x: xPos,
                     y: yPos,
@@ -298,34 +319,39 @@
                 img.style.zIndex = '0';
                 img.style.willChange = 'transform';
                 img.style.pointerEvents = 'none';
+                img.style.fontSize = `${size}px`;
+                img.style.opacity = '0.45';
+                img.style.transition = 'all 0.1s ease';
+                img.style.color = 'transparent';
+                img.style.textShadow = `0 0 1px ${getComputedStyle(document.documentElement).getPropertyValue('--primary')}, 0 0 2px ${getComputedStyle(document.documentElement).getPropertyValue('--primary')}`;
+                img.style.filter = 'drop-shadow(0 0 2px var(--primary))';
 
-                // Создаем плавное движение для каждой картинки
+                // Создаем плавное движение для каждого элемента
                 const animationName = `float-${i}-${Math.random().toString(36).substr(2, 9)}`;
                 const duration = 15 + Math.random() * 15;
                 const delay = Math.random() * 5;
-                const isLeft = img.classList.contains('left-img');
+                const isLeft = iconData.class === 'left-img';
 
-                // Разные параметры движения для каждой картинки
+                // Разные параметры движения для каждого элемента
                 const moveX = 30 + Math.random() * 70;
                 const moveY = 20 + Math.random() * 40;
                 const rotate = 5 + Math.random() * 10;
 
                 const keyframes = `
-            @keyframes ${animationName} {
-                0% { transform: translate(0, 0) rotate(0deg); }
-                25% { transform: translate(${isLeft ? '-' : ''}${moveX * 0.7}px, -${moveY * 0.7}px) rotate(${isLeft ? rotate : -rotate}deg); }
-                50% { transform: translate(${isLeft ? '-' : ''}${moveX}px, 0) rotate(0deg); }
-                75% { transform: translate(${isLeft ? '-' : ''}${moveX * 0.7}px, ${moveY * 0.7}px) rotate(${isLeft ? -rotate : rotate}deg); }
-                100% { transform: translate(0, 0) rotate(0deg); }
-            }
-        `;
+@keyframes ${animationName} {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(${isLeft ? '-' : ''}${moveX * 0.7}px, -${moveY * 0.7}px) rotate(${isLeft ? rotate : -rotate}deg); }
+    50% { transform: translate(${isLeft ? '-' : ''}${moveX}px, 0) rotate(0deg); }
+    75% { transform: translate(${isLeft ? '-' : ''}${moveX * 0.7}px, ${moveY * 0.7}px) rotate(${isLeft ? -rotate : rotate}deg); }
+}`;
 
                 const style = document.createElement('style');
                 style.innerHTML = keyframes;
                 document.head.appendChild(style);
 
                 img.style.animation = `${animationName} ${duration}s ease-in-out ${delay}s infinite`;
-            });
+                document.body.appendChild(img);
+            }
 
             // Параллакс-эффект при скролле
             let lastScrollTop = 0;
@@ -337,11 +363,11 @@
                 if (Math.abs(scrollTop - lastScrollTop) > 5) {
                     lastScrollTop = scrollTop;
 
-                    allImages.forEach(img => {
+                    document.querySelectorAll('.flying-img').forEach(img => {
                         const currentTop = parseInt(img.style.top) || 0;
-                        const speedFactor = 0.3 + Math.random() * 0.4; // Разная скорость для каждой картинки
+                        const speedFactor = 0.3 + Math.random() * 0.4;
                         const newY = currentTop - (scrollTop - lastScrollTop) * speedFactor;
-                        const maxY = docHeight - (parseInt(img.height) || 50);
+                        const maxY = docHeight - (parseInt(img.style.fontSize) || 50);
                         const clampedY = Math.max(0, Math.min(maxY, newY));
 
                         img.style.top = `${clampedY}px`;
